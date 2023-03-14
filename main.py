@@ -177,3 +177,39 @@ def mostrar_menu_mant():
 nomNegocio = NombreNegocio() #instancia del sigleton
 nomNegocio.nombre = " ###### Librería del CTP La Gloria ######" # nombre del programa
 clear()
+# Menú de opciones para el usuario que visita la libreria
+
+while True:
+
+    print("\n", nomNegocio) #imprime nombre del negocio
+    print("#########################################################")
+    print("0. Agregar persona")   # la opción 0  mensaje para agregar persona
+    print("1. Mostrar personas")  # la opción 1  mensaje para mostrar persona
+    print("2. Agregar compra")  # la opción 2 mensaje para agregar compra
+    print("3. Mostrar compras") # la opción 3 mensaje para mostrar compra
+    print("4. Mostrar compras por cliente :")  # la opción 4 mensaje para mostrar compras por cliente
+    print("5. Mantenimiento de personas :")  # la opción 5 mensaje para mantenimiento de personas
+    print("6. Salir") # la opción 6 mensaje para salir del menu
+    print("#########################################################")
+    opcion = input( "Ingrese una opción : " ) # opción para que el usuario pueda elegir la opción que desea
+    os.system("cls")
+    if opcion == "0": # dentro de la condición si la opción es 0
+        agregar_persona() #se va a agregar personas
+    elif opcion == "1": #si la opción es 1
+        mostrar_personas() # se va a mostrar las personas
+    elif opcion == "2": #si la opción es 2
+        agregar_compra() #se agrega compra
+        calcular_subtotal() #se calcula el subtotal
+        calcular_descuento() #se calcula descuento
+        calcular_iva() #se calcula iva
+        calcular_total() #se calcula el total de la compra
+    elif opcion == "3":  #si la opción es 3
+        mostrar_compras() #se muestran las compras
+    elif opcion == "4":  #si la opción es 4
+        mostrar_compras_clientes()  #se muestran las compras de cada cliente
+    elif opcion == "5":  #si la opción es 5
+        mostrar_menu_mant()  #se muestran el menú de mantenimiento de personas
+    elif opcion == "6": #si la opción es 6 sale del programa
+        break #el break se utiliza cerrar un bucle cuando se ejecuta una instrucción diferente, en este caso cierra el programa
+    else:                     # si elige opción que no este en el menu le muestra opción invalida
+        print("#####  Opción inválida.  ######") #imprime mensaje opción invalida
