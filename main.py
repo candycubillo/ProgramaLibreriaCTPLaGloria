@@ -49,7 +49,7 @@ def agregar_persona(): #FUNCIÓN QUE PERMITE AGREGAR PERSONAS con la clase perso
     nombre = input("Ingrese el nombre de la persona : ") #USUARIO INGRESA NOMBRE
     ocupacion = input("Ingrese la ocupación : ")         # USUARIO INGRESA SU OCUPACIÓN
     persona = Persona(cedula, nombre, ocupacion) #A LA VARIABLE PERSONA SE LE ASIGNA LOS ATRIBUTOS DE PERSONA
-    personas.append(persona)                     #AGREGA DATOS DE LOS USUARIOS AL FINAL DE LA LISTA
+    personas.append(persona)                     #AGREGA DATOS DE LOS USUARIOS en la matriz
     print("Persona agregada exitosamente.") # IMPRIME MENSAJE
 
 def eliminar_persona():  #FUNCIÓN QUE PERMITE ELIMINAR PERSONAS con la clase persona
@@ -158,7 +158,7 @@ def mostrar_personas(): # función para mostrar personas
 def mostrar_menu_mant():
     #menú mantenimiento de personas (eliminar y modificar)
     while True:
-        print("\n############## Menú mantenimiento Personas ##############")
+        print("\n############## Menú edición de datos de Personas ##############")
         print("0. Eliminar datos de persona") #Eliminar una persona
         print("1. Modificar datos de persona") #Modificar los datos de una persona
         print("2. Salir") #Salir y volver al menú principal
@@ -188,7 +188,7 @@ while True:
     print("2. Agregar compra")  # la opción 2 mensaje para agregar compra
     print("3. Mostrar compras") # la opción 3 mensaje para mostrar compra
     print("4. Mostrar compras por cliente :")  # la opción 4 mensaje para mostrar compras por cliente
-    print("5. Mantenimiento de personas :")  # la opción 5 mensaje para mantenimiento de personas
+    print("5. Edición datos de personas :")  # la opción 5 mensaje para mantenimiento de personas
     print("6. Salir") # la opción 6 mensaje para salir del menu
     print("#########################################################")
     opcion = input( "Ingrese una opción : " ) # opción para que el usuario pueda elegir la opción que desea
